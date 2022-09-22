@@ -1,5 +1,10 @@
+//import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
+
+Color verde_escuro = const Color.fromARGB(255, 57, 120, 83);
+Color verde_escura = const Color.fromARGB(255, 34, 72, 52);
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -14,46 +19,92 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
 
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: verde_escuro,
+        child: const Icon(Icons.camera_alt_sharp),
+      ),
+
       appBar: 
         AppBar(
           title: Text("Caatinga Lens"),
-          backgroundColor: Color.fromARGB(255, 57, 120, 83),
+          backgroundColor: verde_escuro,
         ),
       body: const Center(
-        child: Text('My Page!'),
-      ),
+        child:
+          Text('My Page!'),
+        ),
       drawer: Drawer(
-        // Add a ListView to the drawer. This ensures the user can scroll
-        // through the options in the drawer if there isn't enough vertical
-        // space to fit everything.
         child: ListView(
-          // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 57, 120, 83),
+                color: const Color.fromARGB(255, 57, 120, 83),
               ),
-              child: Text('Drawer Header'),
+              child:
+                Text('Menu'),
             ),
-            ListTile(
-              title: const Text('Item 1'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
+
+            SizedBox(height: 10,),
+
+            ElevatedButton(
+              onPressed: (){},
+              style:
+                ElevatedButton.styleFrom(
+                  primary: verde_escura,
+                  onPrimary: Colors.white,
+                  fixedSize: Size(400,70),
+              ),
+              child:
+              Row(
+                children: [
+                  Icon(Icons.compost),
+                  Text('Sobre o PEV'),
+                ],
+              ),
             ),
-            ListTile(
-              title: const Text('Item 2'),
-              onTap: () {
-                // Update the state of the app
-                // ...
-                // Then close the drawer
-                Navigator.pop(context);
-              },
+            SizedBox(height: 20,),
+
+            ElevatedButton(
+              onPressed: (){},
+              style:
+              ElevatedButton.styleFrom(
+                primary: verde_escura,
+                onPrimary: Colors.white,
+                fixedSize: Size(400,70),
+              ),
+              child:
+              Row(
+                children: [
+                  Icon(Icons.eco),
+                  Text(
+                      'Plantas da Caatinga',
+                       textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
             ),
+            SizedBox(height: 20,),
+
+            ElevatedButton(
+              onPressed: (){},
+              style:
+              ElevatedButton.styleFrom(
+                primary: verde_escura,
+                onPrimary: Colors.white,
+                fixedSize: Size(400,70),
+              ),
+              child:
+              Row(
+                children: [
+                  Icon(Icons.copyright_outlined),
+                  Text('Atribuições '),
+                ],
+              ),
+            ),
+
+
           ],
         ),
       ),
