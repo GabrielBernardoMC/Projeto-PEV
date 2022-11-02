@@ -1,7 +1,10 @@
 //import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:camera/camera.dart';
+import 'package:projetopev/sobre.dart';
+import 'package:projetopev/telaarvores.dart';
+import 'package:projetopev/atribuicoes.dart';
+
 
 Color verde_escuro = const Color.fromARGB(255, 57, 120, 83);
 Color verde_escura = const Color.fromARGB(255, 34, 72, 52);
@@ -43,13 +46,24 @@ class _HomeState extends State<Home> {
                 color: const Color.fromARGB(255, 57, 120, 83),
               ),
               child:
-                Text('Menu'),
+                Text('Menu',
+                    style:
+                    TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.bold,
+                    )
+                ),
             ),
 
             SizedBox(height: 10,),
 
             ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.of(context)
+                    .push(
+                    MaterialPageRoute(builder: (context) => sobre())
+                );
+              },
               style:
                 ElevatedButton.styleFrom(
                   primary: verde_escura,
@@ -59,28 +73,16 @@ class _HomeState extends State<Home> {
               child:
               Row(
                 children: [
-                  Icon(Icons.compost),
-                  Text('Sobre o PEV'),
-                ],
-              ),
-            ),
-            SizedBox(height: 20,),
-
-            ElevatedButton(
-              onPressed: (){},
-              style:
-              ElevatedButton.styleFrom(
-                primary: verde_escura,
-                onPrimary: Colors.white,
-                fixedSize: Size(400,70),
-              ),
-              child:
-              Row(
-                children: [
-                  Icon(Icons.eco),
-                  Text(
-                      'Plantas da Caatinga',
-                       textAlign: TextAlign.center,
+                  Icon(
+                    Icons.compost,
+                    size: 35.0,
+                  ),
+                  Text('  Sobre o APP',
+                    style:
+                    TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    )
                   ),
                 ],
               ),
@@ -88,7 +90,12 @@ class _HomeState extends State<Home> {
             SizedBox(height: 20,),
 
             ElevatedButton(
-              onPressed: (){},
+              onPressed: (){
+                Navigator.of(context)
+                    .push(
+                      MaterialPageRoute(builder: (context) => telaarvores())
+                );
+              },
               style:
               ElevatedButton.styleFrom(
                 primary: verde_escura,
@@ -98,8 +105,49 @@ class _HomeState extends State<Home> {
               child:
               Row(
                 children: [
-                  Icon(Icons.copyright_outlined),
-                  Text('Atribuições '),
+                  Icon(
+                    Icons.eco,
+                    size: 35.0,
+                  ),
+                  Text('  Plantas da Caatinga',
+                      style:
+                      TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
+
+            ElevatedButton(
+              onPressed: (){
+                Navigator.of(context)
+                    .push(
+                    MaterialPageRoute(builder: (context) => atribuicoes())
+                );
+              },
+              style:
+              ElevatedButton.styleFrom(
+                primary: verde_escura,
+                onPrimary: Colors.white,
+                fixedSize: Size(400,70),
+              ),
+              child:
+              Row(
+                children: [
+                  Icon(
+                    Icons.copyright_outlined,
+                    size: 35.0,
+                  ),
+                  Text('  Atribuições ',
+                      style:
+                      TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )
+                  ),
                 ],
               ),
             ),
