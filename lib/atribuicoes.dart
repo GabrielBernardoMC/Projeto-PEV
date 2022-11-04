@@ -25,7 +25,7 @@ class _atribuicoesState extends State<atribuicoes> {
                 style:
                 TextStyle(
                   // color: Colors.amber,
-                  color: Color.fromARGB(255, 253, 152, 2),
+                  color: verde_escuro,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 )

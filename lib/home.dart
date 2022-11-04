@@ -1,7 +1,7 @@
 //import 'dart:html';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:projetopev/sobre.dart';
+import 'package:projetopev/camera.dart';
 import 'package:projetopev/telaarvores.dart';
 import 'package:projetopev/atribuicoes.dart';
 
@@ -51,6 +51,7 @@ class _HomeState extends State<Home> {
                     TextStyle(
                       fontSize: 27,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     )
                 ),
             ),
@@ -61,7 +62,7 @@ class _HomeState extends State<Home> {
               onPressed: (){
                 Navigator.of(context)
                     .push(
-                    MaterialPageRoute(builder: (context) => sobre())
+                    MaterialPageRoute(builder: (context) => camera())
                 );
               },
               style:
@@ -77,7 +78,7 @@ class _HomeState extends State<Home> {
                     Icons.compost,
                     size: 35.0,
                   ),
-                  Text('  Sobre o APP',
+                  Text('  Camera',
                     style:
                     TextStyle(
                       fontSize: 22,

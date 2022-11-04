@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 Color verde_escuro = const Color.fromARGB(255, 57, 120, 83);
 Color verde_escura = const Color.fromARGB(255, 34, 72, 52);
 
-class sobre extends StatefulWidget {
-  const sobre({Key? key}) : super(key: key);
+class camera extends StatefulWidget {
+  const camera({Key? key}) : super(key: key);
 
   @override
-  State<sobre> createState() => _sobreState();
+  State<camera> createState() => _cameraState();
 }
 
-class _sobreState extends State<sobre> {
+class _cameraState extends State<camera> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,12 +20,12 @@ class _sobreState extends State<sobre> {
         child: Column(
           children: [
             Text(
-                'Sobre o App\n',
+                'Camera\n',
                 textAlign: TextAlign.center,
                 style:
                 TextStyle(
                   // color: Colors.amber,
-                  color: Color.fromARGB(255, 253, 152, 2),
+                  color: verde_escuro,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                 )
@@ -39,7 +39,7 @@ class _sobreState extends State<sobre> {
             // ),
 
             Text(
-                '\nParadas sobre o APP',
+                '\n',
                 textAlign: TextAlign.left,
                 style:
                 TextStyle(
