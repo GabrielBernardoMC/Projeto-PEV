@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:projetopev/camera.dart';
 import 'package:projetopev/telaarvores.dart';
 import 'package:projetopev/atribuicoes.dart';
+import 'package:projetopev/sobre.dart';
 
 
 Color verde_escuro = const Color.fromARGB(255, 57, 120, 83);
@@ -230,6 +231,42 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
+
+            SizedBox(
+              height: 20,
+            ),
+
+            ElevatedButton(
+              onPressed: (){
+                Navigator.of(context)
+                    .push(
+                    MaterialPageRoute(builder: (context) => sobre())
+                );
+              },
+              style:
+              ElevatedButton.styleFrom(
+                primary: verde_escura,
+                onPrimary: Colors.white,
+                fixedSize: Size(400,70),
+              ),
+              child:
+              Row(
+                children: [
+                  Icon(
+                    Icons.work_outline_rounded,
+                    size: 35.0,
+                  ),
+                  Text('  Sobre',
+                      style:
+                      TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      )
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 20,),
 
 
           ],
